@@ -3,8 +3,32 @@
 ### Information
 `Leader` = comma
 
-### NERDTree
+### Commands
+Key | Explanation
+--- | ---
+`d` | delete
+`c` | change
+`y` | yank (copy)
+`v` | visually select
 
+### Motions
+Key | Explanation
+--- | ---
+`a` | all
+`i` | in
+`t` | 'til
+`f` | find forward
+`F` | find backward
+
+### Text objects
+Key | Explanation
+--- | ---
+`w` | words
+`s` | sentences
+`p` | paragraphs
+`t` | tags (available in XML/HTML files)
+
+### NERDTree
 Binding | Description
 --- | ---
 `Leader-n` | NERDTree
