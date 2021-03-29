@@ -1,4 +1,6 @@
-install_path=~/docs
+INSTALL_PATH=~/docs
+CURRENT_UID := $(shell id -u)
+CURRENT_GID := $(shell id -g)
 
 .DEFAULT_GOAL := all
 .PHONY: clean installdirs install uninstall
@@ -9,17 +11,17 @@ HTMLS := $(SRCS:%.md=%.html)
 all: ${HTMLS}
 
 %.html: %.md
-	@docker container run --rm -it -u 1000:1000 -v $(CURDIR):/data jfroche/docker-markdown $<
+	@docker container run --rm -it -u ${CURRENT_UID}:${CURRENT_GID} -v $(CURDIR):/data jfroche/docker-markdown $<
 	@mv $(@:.html=.md.html) $@
 
 clean:
 	@rm -f ${HTMLS}
 
 installdirs:
-	@mkdir -p $(install_path)
+	@mkdir -p $(INSTALL_PATH)
 
 uninstall:
-	@rm -rf $(install_path)
+	@rm -rf $(INSTALL_PATH)
 
 install: uninstall installdirs
-	@mv *.html $(install_path)/
+	@mv *.html $(INSTALL_PATH)/
