@@ -1,6 +1,5 @@
-# System documentation
+# Cheatsheets
 
-### Cheatsheets
 - [sxhkd](sxhkd.html)
 - [Vim](vim.html)
 - [tmux](tmux.html)
