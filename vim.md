@@ -1,4 +1,6 @@
-# Vim Cheatsheet
+<div class="page-header">
+  <h1>Cheatsheets <small>Vim - the ubiquitous text editor</small></h1>
+</div>
 
 ### Information
 `Leader` = comma
