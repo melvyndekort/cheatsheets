@@ -1,4 +1,6 @@
-# tmux Cheatsheet
+<div class="page-header">
+  <h1>Cheatsheets <small>tmux - terminal multiplexer</small></h1>
+</div>
 
 ### With prefix
 Binding | Description

@@ -14,7 +14,9 @@ docker:
 	@docker image build -q -t docker-to-html docker/
 
 %.html: %.md
-	@docker container run --rm -it -u ${CURRENT_UID}:${CURRENT_GID} -v $(CURDIR):/data docker-to-html -o $@ $<
+	@cat header.html.src > $@
+	@docker container run --rm -it -u ${CURRENT_UID}:${CURRENT_GID} -v $(CURDIR):/data docker-to-html $< | sed -e 's///g' >> $@
+	@cat footer.html.src >> $@
 
 clean:
 	@rm -f ${HTMLS}

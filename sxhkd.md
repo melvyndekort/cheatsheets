@@ -1,4 +1,6 @@
-# SXHKD Cheatsheet
+<div class="page-header">
+  <h1>Cheatsheets <small>Simple X hotkey daemon</small></h1>
+</div>
 
 ### Menus
 Binding | Description
