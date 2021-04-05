@@ -139,6 +139,7 @@ Command | Description
 `catimg` | display image inside terminal
 `hex` | show file in hex format
 `copyfile` | copy contents of file to clipboard
+`lsmounts` | curated list of the mounted filesystems
 
 ### <a name="bindings"></a>Bindings
 Binding | Description
