@@ -2,6 +2,9 @@
   <h1>Cheatsheets <small>tmux - terminal multiplexer</small></h1>
 </div>
 
+### Prefix
+`Ctrl-b`
+
 ### With prefix
 Binding | Description
 --- | ---
@@ -13,11 +16,6 @@ Binding | Description
 `Previx + [` | enter copy mode
 `Previx + ]` | paste from buffer
 `Prefix + Ctrl-y` | synchronize panes
-
-### Without prefix
-Binding | Description
---- | ---
-`Ctrl-a` | send prefix to nested tmux
 
 ### Tmux Plugin Manager
 Binding | Description
