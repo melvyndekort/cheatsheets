@@ -7,3 +7,4 @@
 - [Vim](vim.html)
 - [tmux](tmux.html)
 - [i3](i3.html)
+- [FFmpeg](ffmpeg.html)
