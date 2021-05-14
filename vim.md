@@ -25,10 +25,16 @@ Key | Explanation
 ### Text objects
 Key | Explanation
 --- | ---
-`w` | words
-`s` | sentences
-`p` | paragraphs
-`t` | tags (available in XML/HTML files)
+`w` | forward one word
+`b` | back one word
+`e` | end of word
+`s` | sentence
+`p` | paragraph
+`t` | tag (available in XML/HTML files)
+
+### Miscellaneous
+Binding | Description
+`CTRL-^` | Switch to previous buffer
 
 ### NERDTree
 Binding | Description
@@ -42,7 +48,21 @@ Binding | Description
 `Leader-f` | Files
 `Leader-l` | Lines
 `Leader-h` | History
-`Leader-enter` | Buffers
+`Leader-ENTER` | Buffers
+
+### G specials
+Binding | Description
+--- | ---
+`g-[hjkl0$]` | Navigate within a wrapped line
+`g-q{motion}` | Split lines from wrapped line
+`g-u` | Uncapitalize action
+`g-U` | Capitalize action
+`g-~` | Toggle capitalization action
+`g-f` | Open filename which is selected under cursor
+`g-v` | Reselect previous selection in visual mode
+`g-J` | Join lines without spaces
+`g-&` | Run substitute on entire document
+`<NN>G` | Go to line number NN
 
 ### Terminal
 Binding | Description
@@ -60,5 +80,5 @@ Binding | Description
 ### Indenting
 Binding | Description
 --- | ---
-`Tab` | indent
-`Shift-Tab` | unindent
+`TAB` | indent
+`SHIFT-TAB` | unindent
