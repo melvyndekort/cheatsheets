@@ -34,6 +34,7 @@ Key | Explanation
 
 ### Miscellaneous
 Binding | Description
+--- | ---
 `CTRL-^` | Switch to previous buffer
 
 ### NERDTree
