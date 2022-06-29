@@ -3,6 +3,6 @@ resource "cloudflare_record" "site" {
   name    = "cheatsheets"
   type    = "CNAME"
   ttl     = 1
-  proxied = true
+  proxied = false
   value   = "cheatsheets-mdekort-nl.netlify.app"
 }
