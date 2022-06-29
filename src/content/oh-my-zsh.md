@@ -1,7 +1,8 @@
-<div class="page-header">
-  <h1>Cheatsheets <small>Oh My Zsh</small></h1>
-</div>
-
+---
+title: Oh My Zsh
+description: Oh My Zsh
+draft: true
+---
 ### Sections
 - [Git](#git)
 - [Arch Linux](#arch)

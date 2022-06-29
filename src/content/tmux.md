@@ -1,7 +1,8 @@
-<div class="page-header">
-  <h1>Cheatsheets <small>tmux - terminal multiplexer</small></h1>
-</div>
-
+---
+title: tmux
+description: tmux - terminal multiplexer
+draft: true
+---
 ### Prefix
 `Ctrl-b`
 

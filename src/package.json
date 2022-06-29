@@ -1,0 +1,14 @@
+{
+  "name": "cheatsheets",
+  "version": "1.0.0",
+  "description": "A collection of custom cheatsheets for my personal Linux desktop setup",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melvyn de Kort",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

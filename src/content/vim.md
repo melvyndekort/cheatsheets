@@ -1,7 +1,8 @@
-<div class="page-header">
-  <h1>Cheatsheets <small>Vim - the ubiquitous text editor</small></h1>
-</div>
-
+---
+title: Vim
+description: Vim - the ubiquitous text editor
+draft: true
+---
 ### Information
 `Leader` = comma
 

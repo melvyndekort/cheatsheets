@@ -1,31 +1,37 @@
-INSTALL_PATH=~/docs
-CURRENT_UID := $(shell id -u)
-CURRENT_GID := $(shell id -g)
+.DEFAULT_GOAL := server clean_secrets decrypt encrypt init plan apply
+.PHONY: server
 
-.DEFAULT_GOAL := all
-.PHONY: docker clean installdirs install uninstall
+ifndef AWS_SESSION_TOKEN
+  $(error Not logged in, please run 'awsume')
+endif
 
-SRCS := $(wildcard *.md)
-HTMLS := $(SRCS:%.md=%.html)
+server:
+	@cd src; HUGO_MODULE_REPLACEMENTS="github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme" hugo server -D
 
-all: docker ${HTMLS}
+clean_secrets:
+	@rm -f secrets.yaml
 
-docker:
-	@docker image build -q -t docker-to-html docker/
+decrypt: clean_secrets
+	@aws kms decrypt \
+		--ciphertext-blob $$(cat terraform/secrets.yaml.encrypted) \
+		--output text \
+		--query Plaintext \
+		--encryption-context target=cheatsheets | base64 -d > terraform/secrets.yaml
 
-%.html: %.md
-	@cat header.html.src > $@
-	@docker container run --rm -it -u ${CURRENT_UID}:${CURRENT_GID} -v $(CURDIR):/data docker-to-html $< | sed -e 's///g' >> $@
-	@cat footer.html.src >> $@
+encrypt:
+	@aws kms encrypt \
+		--key-id alias/generic \
+		--plaintext fileb://terraform/secrets.yaml \
+		--encryption-context target=cheatsheets \
+		--output text \
+		--query CiphertextBlob > terraform/secrets.yaml.encrypted
+	@rm -f secrets.yaml
 
-clean:
-	@rm -f ${HTMLS}
+init: clean_secrets
+	@cd terraform && terraform init -upgrade
 
-installdirs:
-	@mkdir -p $(INSTALL_PATH)
+plan: init
+	@cd terraform && terraform plan
 
-uninstall:
-	@rm -rf $(INSTALL_PATH)
-
-install: uninstall installdirs
-	@mv *.html $(INSTALL_PATH)/
+apply: init
+	@cd terraform && terraform apply
