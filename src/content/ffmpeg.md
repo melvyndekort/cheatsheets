@@ -1,7 +1,7 @@
 ---
 title: FFmpeg
 description: FFmpeg - record, convert and stream audio and video
-draft: true
+draft: false
 ---
 ### Rotate video
 ```

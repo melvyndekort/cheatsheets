@@ -1,7 +1,7 @@
 ---
 title: Vim
 description: Vim - the ubiquitous text editor
-draft: true
+draft: false
 ---
 ### Information
 `Leader` = comma

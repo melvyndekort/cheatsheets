@@ -1,6 +1,6 @@
 [build]
   base = "src/"
-  command = "hugo --gc --minify"
+  command = "npm install && hugo --gc --minify"
   publish = "public"
 
 [build.environment]

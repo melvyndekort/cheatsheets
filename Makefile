@@ -11,6 +11,9 @@ clean_secrets:
 clean: clean_secrets
 	@rm -rf src/node_modules src/public src/.hugo_build.lock
 
+build: clean
+	@cd src; npm install && hugo --gc --minify
+
 server:
 	@cd src; npm install
 	@cd src; HUGO_MODULE_REPLACEMENTS="github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme" hugo server -D

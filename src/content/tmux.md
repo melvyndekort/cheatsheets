@@ -1,7 +1,7 @@
 ---
 title: tmux
 description: tmux - terminal multiplexer
-draft: true
+draft: false
 ---
 ### Prefix
 `Ctrl-b`
