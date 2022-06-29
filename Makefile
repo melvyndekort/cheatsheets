@@ -1,15 +1,19 @@
-.DEFAULT_GOAL := server clean_secrets decrypt encrypt init plan apply
-.PHONY: server
+.DEFAULT_GOAL := server
+.PHONY: server clean_secrets decrypt encrypt init plan apply
 
 ifndef AWS_SESSION_TOKEN
   $(error Not logged in, please run 'awsume')
 endif
 
-server:
-	@cd src; HUGO_MODULE_REPLACEMENTS="github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme" hugo server -D
-
 clean_secrets:
-	@rm -f secrets.yaml
+	@rm -f terraform/secrets.yaml
+
+clean: clean_secrets
+	@rm -rf src/node_modules src/public src/.hugo_build.lock
+
+server:
+	@cd src; npm install
+	@cd src; HUGO_MODULE_REPLACEMENTS="github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme" hugo server -D
 
 decrypt: clean_secrets
 	@aws kms decrypt \
@@ -25,7 +29,7 @@ encrypt:
 		--encryption-context target=cheatsheets \
 		--output text \
 		--query CiphertextBlob > terraform/secrets.yaml.encrypted
-	@rm -f secrets.yaml
+	@rm -f terraform/secrets.yaml
 
 init: clean_secrets
 	@cd terraform && terraform init -upgrade
