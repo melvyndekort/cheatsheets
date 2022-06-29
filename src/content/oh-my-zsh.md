@@ -1,7 +1,7 @@
 ---
 title: Oh My Zsh
 description: Oh My Zsh
-draft: true
+draft: false
 ---
 ### Sections
 - [Git](#git)

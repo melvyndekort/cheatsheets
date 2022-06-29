@@ -1,7 +1,7 @@
 ---
 title: SXHKD
 description: Simple X hotkey daemon
-draft: true
+draft: false
 ---
 ### Menus
 Binding | Description
