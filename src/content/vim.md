@@ -1,6 +1,7 @@
 ---
 title: Vim
 description: Vim - the ubiquitous text editor
+logo: vim.png
 draft: false
 ---
 ### Information

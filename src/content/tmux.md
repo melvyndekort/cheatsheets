@@ -1,6 +1,7 @@
 ---
 title: tmux
 description: tmux - terminal multiplexer
+logo: tmux.png
 draft: false
 ---
 ### Prefix
