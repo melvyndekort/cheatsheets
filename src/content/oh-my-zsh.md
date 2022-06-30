@@ -21,6 +21,7 @@ draft: false
 - [AWS / awsume](#aws)
 
 ### <a name="git"></a>Git
+{{<table>}}
 Alias | Command
 --- | ---
 `ga` | `git add`
@@ -68,8 +69,10 @@ Alias | Command
 `gclean` | `git clean -id`
 `gpristine` | `git reset --hard && git clean -dffx`
 `grename <old> <new>` | Rename old branch to new, including in origin remote
+{{</table>}}
 
 ### <a name="arch"></a>Arch Linux
+{{<table>}}
 Alias | Description
 --- | ---
 `pacin` | Install packages from the repositories
@@ -92,8 +95,10 @@ Alias | Description
 `pacdisowned` | List all disowned files in your system
 `paclist` | List all installed packages with a short description
 `pacweb` | Open the website of an ArchLinux package
+{{</table>}}
 
 ### <a name="systemd"></a>Systemd
+{{<table>}}
 Alias | Command
 --- | ---
 `sc-list-units` | `systemctl list-units`
@@ -109,8 +114,10 @@ Alias | Command
 `sc-disable-now` | `systemctl disable --now`
 `sc-reboot` | `systemctl reboot`
 `sc-poweroff` | `systemctl poweroff`
+{{</table>}}
 
 ### <a name="misc"></a>Miscellaneous
+{{<table>}}
 Command | Description
 --- | ---
 `ff` | `find . -type f -name`
@@ -142,16 +149,20 @@ Command | Description
 `hex` | show file in hex format
 `copyfile` | copy contents of file to clipboard
 `lsmounts` | curated list of the mounted filesystems
+{{</table>}}
 
 ### <a name="bindings"></a>Bindings
+{{<table>}}
 Binding | Description
 --- | ---
 `Ctrl-f` | accept autosuggested command
 `Ctrl-j` | history search down
 `Ctrl-k` | history search up
 `Ctrl-x + e` | edit current command in editor
+{{</table>}}
 
 ### <a name="docker"></a>Docker
+{{<table>}}
 Alias | Command
 --- | ---
 `d` | `docker`
@@ -160,8 +171,10 @@ Alias | Command
 `dn` | `docker network`
 `ds` | `docker system`
 `dv` | `docker volume`
+{{</table>}}
 
 ### <a name="docker-compose"></a>Docker Compose
+{{<table>}}
 Alias | Command
 --- | ---
 `dco` | `docker-compose`
@@ -179,16 +192,20 @@ Alias | Command
 `dclf` | `docker-compose logs -f`
 `dcstart` | `docker-compose start`
 `dck` | `docker-compose kill`
+{{</table>}}
 
 ### <a name="emoji"></a>Emoji
+{{<table>}}
 Alias | Description
 --- | ---
 `random_emoji` | outputs a random emoji
 `random_emoji fruits` | outputs a random emoji from a group
 `display_emoji` | list all available emoji
 `display_emoji fruits` | list all available emoji from a group
+{{</table>}}
 
 ### <a name="maven"></a>Maven
+{{<table>}}
 Alias | Command
 --- | ---
 `mvnci` | `mvn clean install`
@@ -201,38 +218,49 @@ Alias | Command
 `mvnp` | `mvn package`
 `mvntc` | `mvn tomcat:run`
 `mvn-updates` | `mvn versions:display-dependency-updates`
+{{</table>}}
 
 ### <a name="nmap"></a>Nmap
+{{<table>}}
 Alias | Description
 --- | ---
 `nmap_full` | aggressive full scan that scans all ports, tries to determine OS and service versions
 `nmap_full_udp` | same as full but via UDP
 `nmap_fast` | fast scan of the top 300 popular ports
 `nmap_detect_versions` | detects versions of services and OS, runs on all ports
+{{</table>}}
 
 ### <a name="rsync"></a>Rsync
+{{<table>}}
 Alias | Command
 --- | ---
 `rsync-copy` | `rsync -avz --progress -h`
 `rsync-move` | `rsync -avz --progress -h --remove-source-files`
 `rsync-update` | `rsync -avzu --progress -h`
 `rsync-synchronize` | `rsync -avzu --delete --progress -h`
+{{</table>}}
 
 ### <a name="tmux"></a>Tmux
+{{<table>}}
 Alias | Command
 --- | ---
 `ta` | `tmux attach -t`
 `tl` | `tmux list-sessions`
+{{</table>}}
 
 ### <a name="code"></a>Visual Studio Code
+{{<table>}}
 Alias | Command
 --- | ---
 `vsc` | `code .`
 `vscd file file` | `code --diff file file`
+{{</table>}}
 
 ### <a name="aws"></a>AWS / awsume
+{{<table>}}
 Alias | Description
 --- | ---
 `acp profile` | Assumes role, supports MFA
 `acp` | Clears the profile
 `aws_profiles` | Lists all available profiles
+{{</table>}}
