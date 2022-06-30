@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := server
-.PHONY: server clean_secrets decrypt encrypt init plan apply
+.PHONY: clean_secrets clean build server update decrypt encrypt init plan apply
 
 ifndef AWS_SESSION_TOKEN
   $(error Not logged in, please run 'awsume')
@@ -12,11 +12,16 @@ clean: clean_secrets
 	@rm -rf src/node_modules src/public src/.hugo_build.lock
 
 build: clean
-	@cd src; npm install && hugo --gc --minify
+	@cd src; npm install
+	@cd src; hugo --gc --minify
 
 server:
 	@cd src; npm install
 	@cd src; HUGO_MODULE_REPLACEMENTS="github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme" hugo server -D
+
+update: clean
+	@cd src; npm update
+	@cd src; hugo mod get -u github.com/melvyndekort/dracula-hugo-theme
 
 decrypt: clean_secrets
 	@aws kms decrypt \
