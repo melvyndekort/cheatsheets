@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <div class="container-fluid py-4 bg-background text-center">
+    <p class="py-2"></p>
+    <img src="/images/{{ .Page.Params.logo }}" style="height: 160px;" alt="Missing Logo" />
+    <h3 class="mt-3">{{ .Description }}</h3>
+    <p class="py-2"></p>
+  </div>
+  <div class="container my-4">
+    {{ .Content }}
+  </div>
+{{ end }}

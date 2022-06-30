@@ -1,6 +1,7 @@
 ---
 title: SXHKD
 description: Simple X hotkey daemon
+logo: sxhkd.png
 draft: false
 ---
 ### Menus

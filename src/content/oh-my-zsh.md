@@ -1,6 +1,7 @@
 ---
 title: Oh My Zsh
 description: Oh My Zsh
+logo: oh_my_zsh.png
 draft: false
 ---
 ### Sections
