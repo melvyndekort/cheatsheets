@@ -8,17 +8,17 @@ draft: false
 `Leader` = comma
 
 ### Commands
-{{<table>}}
+{{< table >}}
 Key | Explanation
 --- | ---
 `d` | delete
 `c` | change
 `y` | yank (copy)
 `v` | visually select
-{{</table>}}
+{{< /table >}}
 
 ### Motions
-{{<table>}}
+{{< table >}}
 Key | Explanation
 --- | ---
 `a` | all
@@ -26,10 +26,10 @@ Key | Explanation
 `t` | 'til
 `f` | find forward
 `F` | find backward
-{{</table>}}
+{{< /table >}}
 
 ### Text objects
-{{<table>}}
+{{< table >}}
 Key | Explanation
 --- | ---
 `w` | forward one word
@@ -38,24 +38,24 @@ Key | Explanation
 `s` | sentence
 `p` | paragraph
 `t` | tag (available in XML/HTML files)
-{{</table>}}
+{{< /table >}}
 
 ### Miscellaneous
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `CTRL-^` | Switch to previous buffer
-{{</table>}}
+{{< /table >}}
 
 ### NERDTree
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Leader-n` | NERDTree
-{{</table>}}
+{{< /table >}}
 
 ### Fuzzy finding
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Leader-g` | Git files
@@ -63,10 +63,10 @@ Binding | Description
 `Leader-l` | Lines
 `Leader-h` | History
 `Leader-ENTER` | Buffers
-{{</table>}}
+{{< /table >}}
 
 ### G specials
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `g-[hjkl0$]` | Navigate within a wrapped line
@@ -79,29 +79,29 @@ Binding | Description
 `g-J` | Join lines without spaces
 `g-&` | Run substitute on entire document
 `<NN>G` | Go to line number NN
-{{</table>}}
+{{< /table >}}
 
 ### Terminal
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Leader-t` | Terminal
 `Leader-r` | Ranger
-{{</table>}}
+{{< /table >}}
 
 ### System clipboard
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Leader-d` | Cut to clipboard
 `Leader-y` | Copy to clipboard
 `Leader-p` | Paste to clipboard
-{{</table>}}
+{{< /table >}}
 
 ### Indenting
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `TAB` | indent
 `SHIFT-TAB` | unindent
-{{</table>}}
+{{< /table >}}
