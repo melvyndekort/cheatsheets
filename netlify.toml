@@ -1,8 +1,7 @@
 [build]
   base = "src/"
-  command = "npm install && hugo --gc --minify"
+  command = "npm install && npm run build"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.101.0"
   GO_VERSION = "1.12"
