@@ -5,7 +5,7 @@ logo: sxhkd.png
 draft: false
 ---
 ### Menus
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Super + F6` | edit configs
@@ -15,10 +15,10 @@ Binding | Description
 `Super + F10` | bitwarden
 `Super + F11` | lastpass
 `Super + F12` | power
-{{</table>}}
+{{< /table >}}
 
 ### Tools
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Super + C` | calculator
@@ -27,41 +27,41 @@ Binding | Description
 `Super + Enter` | alacritty
 `Super + Shift + Enter` | ranger
 `Super + Ctrl + Enter` | tmux
-{{</table>}}
+{{< /table >}}
 
 ### Webcams
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Super + [` | webcam brightness--
 `Super + ]` | webcam brightness++
 `Super + \` | webcam brightness reset
-{{</table>}}
+{{< /table >}}
 
 ### Screenshots
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Print` | screenshot
 `Super + Print` | screenshot window
 `Super + Shift + Print` | screenshot area
-{{</table>}}
+{{< /table >}}
 
 ### Notifications
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Ctrl + Space` | close notification
 `Ctrl + Shift + Space` | close all notifications
 `Ctrl + Grave` | re-open notification
-{{</table>}}
+{{< /table >}}
 
 ### Misc
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Super + Shift + P` | generate password
 `Super + X` | lock screen
 `Super + Shift + X` | supend
 `Super + Escape` | reload sxhkdrc
-{{</table>}}
+{{< /table >}}

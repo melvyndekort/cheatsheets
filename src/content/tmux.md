@@ -8,7 +8,7 @@ draft: false
 `Ctrl-b`
 
 ### With prefix
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Previx + ?` | show bindings
@@ -19,13 +19,13 @@ Binding | Description
 `Previx + [` | enter copy mode
 `Previx + ]` | paste from buffer
 `Prefix + Ctrl-y` | synchronize panes
-{{</table>}}
+{{< /table >}}
 
 ### Tmux Plugin Manager
-{{<table>}}
+{{< table >}}
 Binding | Description
 --- | ---
 `Prefix + I` | install new tmux plugins
 `Prefix + U` | update tmux plugins
 `Prefix + Alt-u` | uninstall old tmux plugins
-{{</table>}}
+{{< /table >}}
