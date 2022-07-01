@@ -4,7 +4,7 @@
   "description": "A collection of custom cheatsheets for my personal Linux desktop setup",
   "main": "index.html",
   "scripts": {
-    "clean": "rm -rf node_modules public .hugo_build.lock go.sum",
+    "clean": "rm -rf node_modules public .hugo_build.lock go.sum resources",
     "dev": "HUGO_MODULE_REPLACEMENTS='github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme' hugo server --watch --disableFastRender --gc",
     "dev:drafts": "HUGO_MODULE_REPLACEMENTS='github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme' hugo server --watch --disableFastRender --gc --buildFuture --buildDrafts",
     "build": "hugo --gc --cleanDestinationDir --minify",
