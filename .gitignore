@@ -1,6 +1,6 @@
 node_modules/
 public/
-_gen/
+resources/
 go.sum
 .hugo_build.lock
 
