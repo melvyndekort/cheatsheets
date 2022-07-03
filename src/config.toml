@@ -16,3 +16,15 @@ relativeURLS = true
   [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     target = "assets/js/bootstrap.bundle.min.js"
+
+[[redirects]]
+  from = "/"
+  to = "/ffmpeg/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/ffmpeg/"
+  status = 302
+  force = true
