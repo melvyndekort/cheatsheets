@@ -5,3 +5,15 @@
 
 [build.environment]
   GO_VERSION = "1.12"
+
+[[redirects]]
+  from = "/"
+  to = "/ffmpeg"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/ffmpeg"
+  status = 302
+  force = true

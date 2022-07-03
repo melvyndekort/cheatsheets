@@ -4,18 +4,6 @@ title = 'Cheatsheets'
 enableRobotsTXT = true
 relativeURLS = true
 
-[[redirects]]
-  from = "/"
-  to = "/ffmpeg/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/index.html"
-  to = "/ffmpeg/"
-  status = 302
-  force = true
-
 [params]
   author = 'Melvyn de Kort'
   description = 'A collection of custom cheatsheets for my personal Linux desktop setup'
