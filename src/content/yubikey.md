@@ -15,3 +15,8 @@ gpg --card-status
 gpg --edit-key <key identifier>
   trust
 ```
+### Card not found
+```
+sudo systemctl stop pcscd
+pkill gpg-agent
+```
