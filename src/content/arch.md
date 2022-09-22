@@ -6,5 +6,13 @@ draft: false
 ---
 ### Upgrade Arch Linux keyring
 ```
-sudo pacman -S archlinux-keyring
+pacman -S archlinux-keyring
+```
+### Verify lock status of user
+```
+passwd --status user
+```
+### Unlock user
+```
+passwd --unlock user
 ```
