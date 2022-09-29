@@ -1,6 +1,6 @@
 ---
 title: Libvirt
-description: libvirt: The virtualization API
+description: libvirt - The virtualization API
 logo: libvirt.png
 draft: false
 ---
