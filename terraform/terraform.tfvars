@@ -1,3 +1,5 @@
 name        = "cheatsheets-mdekort-nl"
-repo        = "melvyndekort/cheatsheets"
 domain_name = "cheatsheets.mdekort.nl"
+repo_owner  = "melvyndekort"
+repo_name   = "cheatsheets"
+repo_branch = "main"
