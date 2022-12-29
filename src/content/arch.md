@@ -8,6 +8,12 @@ draft: false
 ```
 pacman -S archlinux-keyring
 ```
+or
+```
+rm -R /etc/pacman.d/gnupg
+pacman-key --init
+pacman-key --populate archlinux
+```
 ### Verify lock status of user
 ```
 passwd --status user
