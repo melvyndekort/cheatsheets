@@ -1,10 +1,10 @@
 ---
-title: zfs
+title: ZFS
 description: ZFS - the Enterprise-grade File System for Everyone
 logo: zfs.png
 draft: false
 ---
-## Initial setup of ZFS storage pool
+### Initial setup of ZFS storage pool
 ```
 parted /dev/sda
   mklabel gpt
@@ -34,23 +34,23 @@ systemctl enable zfs.target
 systemctl enable zfs-import.target
 ```
 
-## Initial setup of ZFS datasets
+### Initial setup of ZFS datasets
 ```
 zfs create storage/movies
 zfs create storage/tvshows
 zfs create storage/photos
 ```
 
-## Setup of scrubbing
+### Setup of scrubbing
 
-### Manual scrub
+#### Manual scrub
 zpool scrub storage
 
-### Automate scrub once a week
+#### Automate scrub once a week
 systemctl enable zfs-scrub-weekly@storage.timer
 
-## Problem solving
+### Problem solving
 
-### Manually fix load problems during boot
+#### Manually fix load problems during boot
 zpool import -d /dev/disk/by-id storage
 
