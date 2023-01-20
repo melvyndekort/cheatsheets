@@ -1,6 +1,6 @@
 ---
 title: Btrfs
-description: Btrfs - a modern copy-on-write file system for Linux with advanced features for fault tolerance, repair and easy administration
+description: Btrfs - a modern copy-on-write file system for Linux
 logo: btrfs.png
 draft: false
 ---
@@ -78,7 +78,7 @@ btrfs scrub status /storage
 ```
 
 #### Automate scrub
-**/etc/systemd/system/scrubber.service**
+/etc/systemd/system/scrubber.service
 ```
 [Unit]
 Description=Scrub the Btrfs storagefs filesystem
@@ -87,7 +87,7 @@ Description=Scrub the Btrfs storagefs filesystem
 ExecStart=btrfs scrub start -Bd /dev/disk/by-label/storagefs
 ```
 
-**/etc/systemd/system/scrubber.trigger**
+/etc/systemd/system/scrubber.trigger
 ```
 [Unit]
 Description=Scrubber service timer
