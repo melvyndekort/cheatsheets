@@ -78,4 +78,25 @@ btrfs scrub status /storage
 ```
 
 #### Automate scrub
-It's a good idea to automate some kind of systemd service/timer that starts a scrub once a month or once a week.
+**/etc/systemd/system/scrubber.service**
+```
+[Unit]
+Description=Scrub the Btrfs storagefs filesystem
+
+[Service]
+ExecStart=btrfs scrub start -Bd /dev/disk/by-label/storagefs
+```
+
+**/etc/systemd/system/scrubber.trigger**
+```
+[Unit]
+Description=Scrubber service timer
+
+[Timer]
+OnBootSec=0min
+OnCalendar=*-*-01 04:00:00
+Unit=scrubber.service
+
+[Install]
+WantedBy=multi-user.target
+```
