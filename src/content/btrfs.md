@@ -6,15 +6,15 @@ draft: false
 ---
 ### Initial setup of Btrfs mirror
 ```
-parted /dev/sda
-  mklabel gpt
-  mkpart hdd1 0% 100%
+dd if=/dev/zero of=/dev/sda bs=4M count=100
+parted /dev/sda mklabel gpt
+parted /dev/sda mkpart storage-hdd1 0% 100%
 
-parted /dev/sdb
-  mklabel gpt
-  mkpart hdd2 0% 100%
+dd if=/dev/zero of=/dev/sdb bs=4M count=100
+parted /dev/sdb mklabel gpt
+parted /dev/sdb mkpart storage-hdd2 0% 100%
 
-mkfs.btrfs -L storagefs -m raid1 -d raid1 /dev/disk/by-id/hdd1 /dev/disk/by-id/hdd2
+mkfs.btrfs -L storagefs -m raid1 -d raid1 /dev/disk/by-partlabel/storage-hdd1 /dev/disk/by-partlabel/storage-hdd2
 ```
 
 ### Creation of Btrfs subvolumes
@@ -65,6 +65,7 @@ UUID=$UUID /storage/torrents   btrfs defaults,nofail,noatime,autodefrag,compress
 UUID=$UUID /storage/tvshows    btrfs defaults,nofail,noatime,autodefrag,compress=zstd,subvol=@tvshows    0 0
 EOF
 
+mkdir /storage
 mount -a
 ```
 
@@ -77,6 +78,4 @@ btrfs scrub status /storage
 ```
 
 #### Automate scrub
-```
-systemctl enable btrfs-scrub@storage.timer
-```
+It's a good idea to automate some kind of systemd service/timer that starts a scrub once a month or once a week.
