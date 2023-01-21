@@ -14,12 +14,12 @@ dd if=/dev/zero of=/dev/sdb bs=4M count=100
 parted /dev/sdb mklabel gpt
 parted /dev/sdb mkpart storage-hdd2 0% 100%
 
-mkfs.btrfs -L storagefs -m raid1 -d raid1 /dev/disk/by-partlabel/storage-hdd1 /dev/disk/by-partlabel/storage-hdd2
+mkfs.btrfs -L storage -m raid1 -d raid1 /dev/disk/by-partlabel/storage-hdd1 /dev/disk/by-partlabel/storage-hdd2
 ```
 
 ### Creation of Btrfs subvolumes
 ```
-mount -o compress=zstd /dev/disk/by-label/storagefs /mnt
+mount -o compress=zstd /dev/disk/by-label/storage /mnt
 cd /mnt
 
 btrfs subvolume create @
@@ -46,7 +46,7 @@ umount -R /mnt
 
 ### Setup fstab for automounting at boot
 ```
-UUID=$(blkid -s UUID -o value /dev/disk/by-label/storagefs)
+UUID=$(blkid -s UUID -o value /dev/disk/by-label/storage)
 
 cat <<EOF>>/etc/fstab
 UUID=$UUID /storage            btrfs defaults,nofail,noatime,autodefrag,compress=zstd,subvol=@           0 0
@@ -81,10 +81,10 @@ btrfs scrub status /storage
 /etc/systemd/system/scrubber.service
 ```
 [Unit]
-Description=Scrub the Btrfs storagefs filesystem
+Description=Scrub the Btrfs storage filesystem
 
 [Service]
-ExecStart=btrfs scrub start -Bd /dev/disk/by-label/storagefs
+ExecStart=btrfs scrub start -Bd /dev/disk/by-label/storage
 ```
 
 /etc/systemd/system/scrubber.trigger
