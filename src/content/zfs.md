@@ -52,13 +52,18 @@ chown 8888:8888 audiobooks downloads ebooks erotica kids movies music photos sof
 ### Setup of scrubbing
 
 #### Manual scrub
+```
 zpool scrub storage
+```
 
 #### Automate scrub once a month
+```
 systemctl enable zfs-scrub-monthly@storage.timer
+```
 
 ### Problem solving
 
 #### Manually fix load problems during boot
+```
 zpool import -d /dev/disk/by-id storage
-
+```
