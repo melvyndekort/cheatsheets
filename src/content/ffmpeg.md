@@ -8,3 +8,7 @@ draft: false
 ```
 ffmpeg -i source.mkv -vf "transpose=1" target.mkv
 ```
+### Convert to HEVC/x265
+```
+ffmpeg -i source.mkv -c:v libx265 -crf 26 -preset fast -c:a copy target.mkv
+```
