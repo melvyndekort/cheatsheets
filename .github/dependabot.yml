@@ -6,13 +6,25 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    assignees:
+      - "melvyndekort"
+    reviewers:
+      - "melvyndekort"
   # Maintain dependencies for NPM
   - package-ecosystem: "npm"
     directory: "/src"
     schedule:
       interval: "weekly"
+    assignees:
+      - "melvyndekort"
+    reviewers:
+      - "melvyndekort"
   # Maintain dependencies for Terraform
   - package-ecosystem: "terraform"
     directory: "/terraform"
     schedule:
       interval: "weekly"
+    assignees:
+      - "melvyndekort"
+    reviewers:
+      - "melvyndekort"
