@@ -12,7 +12,6 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,6 +29,7 @@ jobs:
         working-directory: src
 
       - name: Publish to Cloudflare Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
