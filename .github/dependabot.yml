@@ -1,7 +1,6 @@
 version: 2
 
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -10,7 +9,6 @@ updates:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
-  # Maintain dependencies for NPM
   - package-ecosystem: "npm"
     directory: "/src"
     schedule:
@@ -19,11 +17,10 @@ updates:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
-  # Maintain dependencies for Terraform
   - package-ecosystem: "terraform"
     directory: "/terraform"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     assignees:
       - "melvyndekort"
     reviewers:
