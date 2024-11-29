@@ -15,6 +15,7 @@ Binding | Description
 `g -> .` | go to ~/.config
 `g -> m` | go to Arch mount dir
 `g -> M` | go to Ubuntu mount dir
+{{< /table >}}
 
 ### Selection
 {{< table >}}
@@ -22,6 +23,7 @@ Binding | Description
 --- | ---
 `Ctrl + a` | Select all files
 `Ctrl + r` | Inverse selection
+{{< /table >}}
 
 ### File operations
 {{< table >}}
@@ -38,6 +40,7 @@ Binding | Description
 `;` | Run a shell command
 `:` | Run a shell command (blocking)
 `.` | Toggle hidden files
+{{< /table >}}
 
 ### Tabs
 {{< table >}}
@@ -50,12 +53,14 @@ Binding | Description
 `{` | Swap current tab with previous tab
 `}` | Swap current tab with next tab
 `Ctrl + c` | Close the current tab
+{{< /table >}}
 
 ### Misc bindings
 {{< table >}}
 Binding | Description
 --- | ---
 `!` | Temporarily go to parent shell
+{{< /table >}}
 
 ### Copy paths
 {{< table >}}
@@ -65,6 +70,7 @@ Binding | Description
 `c -> d` | Copy the directory path
 `c -> f` | Copy the filename
 `c -> n` | Copy the filename without extension
+{{< /table >}}
 
 ### Search files
 {{< table >}}
@@ -73,6 +79,7 @@ Binding | Description
 `s` | Search using **fd**
 `S` | Search using **ripgrep**
 `Ctrl + s` | Cancel search
+{{< /table >}}
 
 ### Sorting
 {{< table >}}
@@ -91,3 +98,4 @@ Binding | Description
 `, -> s` | Sort by size
 `, -> S` | Sort by size (reverse)
 `, -> r` | Sort randomly
+{{< /table >}}
