@@ -59,6 +59,7 @@ Binding | Description
 {{< table >}}
 Binding | Description
 --- | ---
+`Ctrl-s` | Temporarily go to shell
 `!` | Temporarily go to parent shell
 {{< /table >}}
 
