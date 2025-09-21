@@ -17,6 +17,14 @@ updates:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
+  - package-ecosystem: "gomod"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "melvyndekort"
+    reviewers:
+      - "melvyndekort"
   - package-ecosystem: "terraform"
     directory: "/terraform"
     schedule:
