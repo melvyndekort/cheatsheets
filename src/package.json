@@ -19,7 +19,7 @@
     "bootstrap": "^5.3.8"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.22",
     "hugo-extended": "^0.152.2",
     "npm-check": "^6.0.1",
     "postcss": "^8.5.6",
