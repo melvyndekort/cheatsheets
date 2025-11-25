@@ -5,19 +5,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    rebase-strategy: "auto"
     assignees:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
-  - package-ecosystem: "npm"
-    directory: "/src"
-    schedule:
-      interval: "weekly"
-    assignees:
-      - "melvyndekort"
-    reviewers:
-      - "melvyndekort"
-  - package-ecosystem: "gomod"
     directory: "/src"
     schedule:
       interval: "weekly"
@@ -29,6 +21,7 @@ updates:
     directory: "/terraform"
     schedule:
       interval: "daily"
+    rebase-strategy: "auto"
     assignees:
       - "melvyndekort"
     reviewers:
