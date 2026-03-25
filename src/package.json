@@ -11,7 +11,7 @@
     "start": "HUGO_MODULE_REPLACEMENTS='github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme' hugo server --watch --cleanDestinationDir --disableFastRender --gc --minify --renderToDisk",
     "start:drafts": "HUGO_MODULE_REPLACEMENTS='github.com/melvyndekort/dracula-hugo-theme -> ../../../dracula-hugo-theme' hugo server --watch --cleanDestinationDir --disableFastRender --gc --minify --buildFuture --buildDrafts --renderToDisk",
     "update-modules": "hugo mod get -u",
-    "npm-check": "npm-check -u"
+    "npm-check": "npx npm-check-updates -ui"
   },
   "author": "Melvyn de Kort",
   "license": "MIT",
@@ -21,7 +21,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.22",
     "hugo-extended": "^0.157.0",
-    "npm-check": "^6.0.1",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1"
   }
