@@ -10,13 +10,17 @@ updates:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
+
+  - package-ecosystem: "npm"
     directory: "/src"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    rebase-strategy: "auto"
     assignees:
       - "melvyndekort"
     reviewers:
       - "melvyndekort"
+
   - package-ecosystem: "terraform"
     directory: "/terraform"
     schedule:
