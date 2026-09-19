@@ -23,5 +23,9 @@
     "hugo-extended": "^0.166.0",
     "postcss": "^8.5.23",
     "postcss-cli": "^12.0.0"
+  },
+  "overrides": {
+    "adm-zip": "^0.6.1",
+    "nanoid": "^3.3.18"
   }
 }
