@@ -16,7 +16,7 @@
   "author": "Melvyn de Kort",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.9"
   },
   "devDependencies": {
     "autoprefixer": "^10.6.2",
